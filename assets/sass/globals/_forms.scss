@@ -29,6 +29,7 @@ button,
 input,
 select,
 textarea {
+	max-width: 100%;
     font-size: 100%;
     margin: 0;
     vertical-align: baseline;
@@ -85,3 +86,18 @@ textarea {
     vertical-align: top;
     resize: vertical;
     }
+    
+/* Buttons ------------------------------------- */
+
+button, .button, input[type="submit"] {
+	display: inline-block;
+	padding: 1em;
+	border: 3px solid $gold;
+	color: $white;
+	font-family: $serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	background: transparent;
+	letter-spacing: 1px;
+}

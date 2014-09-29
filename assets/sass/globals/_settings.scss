@@ -1,18 +1,13 @@
-/*
-
-    MIXINS AND VARIABLES
-    ====================
-
-    All mixins and variables live here. Where possible, please include
-    a source link if they're written by someone else along with an
-    indication of how they should be used in the css files.
-
-*/
-
-
+/* ==========================================================================
+	Mixins, Variables, etc.
+============================================================================= */
 
 /* Colour Palette */
 $white: #fff;
+$darkgray: #2c2c2c;
+$pink: #d40759;
+$gold: #c7a873;
+$lightpurple: #413f42;
 
 /* REM Font sizing - http://blog.divshot.com/post/29552945105/useful-sass-mixins-for-responsive-design-font-sizing */
 // Use: @include font-size(1,1.5);
@@ -114,3 +109,19 @@ $white: #fff;
         display: inline;
         }
     }
+
+// CSS Image Replacement
+%ir {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// Absolute Center
+%abscenter {
+	width: 50%;
+	height: 50%;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;			
+}

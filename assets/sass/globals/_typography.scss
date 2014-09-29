@@ -1,7 +1,5 @@
-/*
-	NOTE: If you use Google fonts, import it here. Don't include the http bit then it's safe across secure too
-	@import url(//fonts.googleapis.com/css?family=Paytone+One;
-*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic);
 
 /*
 Font weights set as variables because sometimes there are multiple weights,
@@ -11,19 +9,28 @@ If you've just got normal and bold, you don't need the variable.
 $normal: normal;
 $bold: bold;
 
+$serif: "Merriweather", Georgia, serif;
+$sans-serif: 'Montserrat', Helvetica, Arial, sans-serif;
+
 html {
     font-size: 100%;
-    }
+}
 
 body {
     @include font-size(1,1.5);
-	}
+    font-family: $serif;
+    color: $darkgray;
+    -webkit-font-smoothing: antialiased;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	@include font-size(1.5, 1.75);
-	}
-
-    h2 {}
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+	h1 { @include font-size(2.875, 1); }
+    h2 { @include font-size(2.375, 1); }
     h3 {}
     h4 {}
     h5 {}
@@ -35,6 +42,7 @@ p {
 
 a {
 	@include hover-fade;
+	text-decoration: none;
 
 	&:hover,
     &:active {

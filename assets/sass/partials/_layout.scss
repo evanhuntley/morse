@@ -13,18 +13,18 @@ body {
     padding: 0;
     margin: 0 auto;
     width: 100%;
-    }
+}
 
 ul, ol {
     margin: 0 0 1.5em 1.5em;
-    }
+}
 
 li {
     > ul,
     > ol {
          margin-bottom:0;
-         }
     }
+}
 
 img,
 a img {
@@ -36,11 +36,16 @@ a img {
 
 figure, img {
 
-    }
+}
 
 figure {
 
     figcaption {
 
-        }
-    }
+	}
+}
+
+.wrapper {
+	max-width: 1175px;
+	margin: 0 auto;
+}

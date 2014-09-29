@@ -31,10 +31,9 @@
 <!-- The little things -->
 
 <!-- Stylesheets -->
-	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<!-- Stylesheets -->
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/style.css" />
 
-<!-- Load scripts quick smart -->
+<!-- Stylesheets -->
 
 <!-- Load scripts quick smart -->
 
@@ -43,18 +42,37 @@
 
 <body <?php body_class(); ?> id="top">
     <header role="banner">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a>
-        <p class="desc">
-			<?php bloginfo( 'description' ); ?>
-        </p>
-        <nav role="navigation">
-            <?php
-                $args = array(
-                    'container' => 'false',
-                    'items_wrap' => '<ul>%3$s</ul>',
-                    );
-                wp_nav_menu($args);
-            ?>
-        </nav>
-        <?php get_search_form(); ?>
+    	<div class="access-nav">
+    		<div class="wrapper">
+    			<ul>
+    				<li><a href="#">Meet DJ Mike Morse</a></li>
+    				<li><a href="#">Client Login</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="header-main wrapper">
+	        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a>
+        	<button id="menu-toggle"><i class="icon-menu"></i></button>
+	        <div class="main-menu">
+		        <nav role="navigation">
+		            <?php
+		                $args = array(
+		                    'container' => 'false',
+		                    'items_wrap' => '<ul>%3$s</ul>',
+		                    );
+		                wp_nav_menu($args);
+		            ?>
+		        </nav>
+		        <ul class="social">
+		        	<li><a href="#"><i class="icon-twitter"></i></a></li>
+		        	<li><a href="#"><i class="icon-facebook"></i></a></li>
+		        	<li><a href="#"><i class="icon-instagram"></i></a></li>
+		        	<li><a href="#"><i class="icon-youtube"></i></a></li>
+		        </ul>
+	        </div>
+    	</div>
+		<div class="page-heading">
+			<h1>This is the Title!</h1>
+			<h2>That is a Subtitle</h2>
+		</div>
     </header>

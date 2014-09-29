@@ -1,0 +1,97 @@
+/* ==========================================================================
+	Footer
+============================================================================= */	
+
+.footer-top {
+	@extend %clearfix;
+	padding: 0 2em;
+	color: #fff;
+	background: #272528;
+	
+	.contact {
+		margin: 0 0 3em;
+		padding: 2em 0;
+		background: url('../img/bg_footer-border.png') repeat-x bottom left;
+		
+		h3 {
+			font-family: $serif;
+			@include font-size(1.25);
+			letter-spacing: 2px;
+		}
+		
+		h4 {
+			margin: 0;
+			@include font-size(1.0625);
+		}
+	}
+	
+	.button {
+		width: 100%;
+		margin: 0 0 2em;
+		border-color: $lightpurple;
+	}
+	
+	/* Social Media -------------------------- */
+	
+	.social {
+		@extend %clearfix;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			margin: 0 .5em;
+			text-align: center;
+		}
+		
+		a {
+			display: table-cell;
+			vertical-align: middle;
+			width: 44px;
+			height: 44px;
+			color: 	#272528;
+			background: $lightpurple;
+			@include font-size(1.5);
+			line-height: 0;
+			text-align: center;		
+			border-radius: 22px;	
+		}	
+	}
+	
+	/* Contact Form -------------------------- */
+	
+	form {
+		
+		@include bp-l {
+			float: right;
+		}
+	}
+	
+	input[type="text"], input[type="email"], textarea {
+		background: $lightpurple;
+		border: none;
+	}
+	
+	input[type="submit"] {
+		width: 100%;
+		border-color: $lightpurple;
+	}
+	
+}  // end footer-top
+
+.footer-bottom {
+	padding: 0 2em;
+	background: #231f1e;
+	
+	p {
+		margin: 0;
+		padding: 1em 0;
+		font-family: $sans-serif;
+		@include font-size(.8125);
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
