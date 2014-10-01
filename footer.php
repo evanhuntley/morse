@@ -6,22 +6,26 @@
 <footer role="contentinfo">
 	<div class="footer-top">
 		<div class="wrapper">
-			<div class="contact">
-				<h3>Contact Us</h3>
-				<h4>Morse Entertainment</h4>
-				<div class="address"><?php echo $address; ?></div>
-				<p class="phone"><?php echo 'Office: ' . $phone; ?></p>
+			<div class="general-info">
+				<div class="contact">
+					<h3>Contact Us</h3>
+					<h4>Morse Entertainment</h4>
+					<div class="address"><?php echo $address; ?></div>
+					<p class="phone"><?php echo 'Office: ' . $phone; ?></p>
+				</div>
+				<a class="button" href="#">Book Your Event Today</a>
+				<ul class="social">
+		        	<li><a href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
+		        	<li><a href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>
+		        	<li><a href="<?php echo ot_get_option('instagram_url'); ?>"><i class="icon-instagram"></i></a></li>
+		        	<li><a href="<?php echo ot_get_option('youtube_url'); ?>"><i class="icon-youtube"></i></a></li>			
+				</ul>
 			</div>
-			<a class="button" href="#">Book Your Event Today</a>
-			<ul class="social">
-	        	<li><a href="#"><i class="icon-twitter"></i></a></li>
-	        	<li><a href="#"><i class="icon-facebook"></i></a></li>
-	        	<li><a href="#"><i class="icon-instagram"></i></a></li>
-	        	<li><a href="#"><i class="icon-youtube"></i></a></li>			
-			</ul>
 			
+			<div class="inquiry-form">
 			<?php echo do_shortcode('[contact-form-7 id="19" title="Primary Contact Form"]'); ?>
-	
+			</div>
+			
 	        <nav role="navigation">
 	            <?php
 	                $args = array(

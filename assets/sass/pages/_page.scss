@@ -6,12 +6,35 @@
 
 .primary-content {
 	@extend .wrapper;
+	position: relative;
+	padding: 6em 0 0;
 	background: $white;
 	border: 1px solid #d9d9d9;
 	
 	@include bp-l {
 		position: relative;
 		top: -4em;
+		text-align: center;
+	}
+	
+	section {
+		padding: 0 3.5%;		
+	}
+	
+	.call-to-action {
+		position: absolute;
+		top: -2em;
+		left: 50%;
+		width: 350px;
+		margin-left: -175px;
+		padding: 1.5em 2em;
+		background: #fff;
+		
+		a {
+			width: 100%;
+			text-decoration: none;
+			color: #000;
+		}
 	}
 	
 	a {

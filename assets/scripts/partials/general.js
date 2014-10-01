@@ -4,7 +4,7 @@
 
 $(document).ready(function() {
 	
-	$navMenu = $('nav ul');
+	$navMenu = $('nav > ul');
 	$accessNav = $('.access-nav ul');
 	
 	enquire.register("screen and (max-width: 768px)", {
@@ -29,14 +29,26 @@ $(document).ready(function() {
 				if ( $currentClass == "icon-menu") {
 					$icon.attr('class', 'icon-close');
 				} else {
-					$icon.attr('class', 'icon-menu');
+					$icon.attr('class', 'icon-menu'); 
 				}
 			
 				$('.main-menu').slideToggle();
 			});			
 			
 			// Hide Menu
-			$('.main-menu').css("display", "none");			
+			$('.main-menu').css("display", "none");	
+			
+			// Expand Submenus on First Click, Go on Second
+			$('.menu-item-has-children a').click(function(e) {
+				  var clicks = $(this).data('clicks');
+				  if (clicks) {
+				  
+				  } else {
+				     $(this).next('.sub-menu').slideDown();
+				     e.preventDefault();			     
+				  }
+				  $(this).data('clicks', !clicks);
+			});					
 			
 		},
 		

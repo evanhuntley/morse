@@ -137,6 +137,11 @@ nav {
 			padding: 0 1em;
 		}
 	}
+	
+	.sub-menu {
+		display: none;
+		background: #231f1e;
+	}
 }
 
 /* Social Media Menu ------------------------------ */
@@ -180,7 +185,7 @@ header .social {
 
 .page-heading {
 	@extend %clearfix;
-	margin: 3em 0;
+	margin: 3em 0 8em;
 	color: $white;
 	text-align: center;
 	

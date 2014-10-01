@@ -3,19 +3,12 @@
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <article role="main" class="primary-content type-post" id="post-<?php the_ID(); ?>">
-            <header>
-                <h1><?php the_title(); ?></h1>
-            </header>
 
-			<?php the_post_thumbnail('full');?>
-
+			<div class="profile-img">
+				<?php the_post_thumbnail('full');?>
+			</div>
+			
 			<?php the_content(); ?>
-
-			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:' ), 'after' => '</div>' ) ); ?>
-
-            <footer class="entry-meta">
-            	<p>Posted <strong><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?></strong> on <time datetime="<?php the_time('l, F jS, Y') ?>" pubdate><?php the_time('l, F jS, Y') ?></time> &middot; <a href="<?php the_permalink(); ?>">Permalink</a></p>
-            </footer>
 
             <ul class="navigation">
                 <li class="older">

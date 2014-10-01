@@ -58,21 +58,26 @@
 		            <?php
 		                $args = array(
 		                    'container' => 'false',
-		                    'items_wrap' => '<ul>%3$s</ul>',
+		                    'items_wrap' => '%3$s',
 		                    );
 		                wp_nav_menu($args);
 		            ?>
+		        	<li><a href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
+		        	<li><a href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>
+		        	<li><a href="<?php echo ot_get_option('instagram_url'); ?>"><i class="icon-instagram"></i></a></li>
+		        	<li><a href="<?php echo ot_get_option('youtube_url'); ?>"><i class="icon-youtube"></i></a></li>
 		        </nav>
-		        <ul class="social">
-		        	<li><a href="#"><i class="icon-twitter"></i></a></li>
-		        	<li><a href="#"><i class="icon-facebook"></i></a></li>
-		        	<li><a href="#"><i class="icon-instagram"></i></a></li>
-		        	<li><a href="#"><i class="icon-youtube"></i></a></li>
-		        </ul>
 	        </div>
     	</div>
 		<div class="page-heading">
-			<h1>This is the Title!</h1>
+			<h1>
+				<?php if ( get_post_type() == 'staff' ) {
+					echo get_the_title();
+				} else {
+					echo "This is the Title!";
+				}
+				?>
+			</h1>
 			<h2>That is a Subtitle</h2>
 		</div>
     </header>
