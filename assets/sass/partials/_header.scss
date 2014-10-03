@@ -12,6 +12,18 @@ header {
 		text-transform: uppercase;
 		color: #fff;
 	}
+	
+	&.banner-1 {
+		background-image: url('../img/bg_bride-groom.jpg');
+	}
+	
+	&.banner-2 {
+		background-image: url('../img/bg_girl-dancing.jpg');
+	}
+	
+	&.banner-3 {
+		background-image: url('../img/bg_staff.jpg');
+	}
 }
 
 /* Access Nav ---------------------------------- */

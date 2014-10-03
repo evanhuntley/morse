@@ -41,7 +41,10 @@
 </head>
 
 <body <?php body_class(); ?> id="top">
-    <header role="banner">
+	<?php
+		$banner_image = types_render_field("banner_image", array("raw" => true));
+	?>	
+    <header role="banner" class="banner-<?php echo $banner_image; ?>">
     	<div class="access-nav">
     		<div class="wrapper">
     			<ul>
@@ -69,15 +72,25 @@
 		        </nav>
 	        </div>
     	</div>
+    	<?php 
+    		if ( get_post_type() == 'staff' ) {
+	    		$title = get_the_title();
+    		} else {
+	    		$title = types_render_field("header_title", array("raw" => true));
+	    		if( empty($title)) {
+	    			$title = "A Wedding Experience";
+				}
+    		} 
+    		
+    		$subtitle = types_render_field("header_subtitle", array("raw" => true));
+			if ( empty($subtitle)) {
+				$subtitle = "That You Will Never Forget";
+			}
+    	?>
 		<div class="page-heading">
 			<h1>
-				<?php if ( get_post_type() == 'staff' ) {
-					echo get_the_title();
-				} else {
-					echo "This is the Title!";
-				}
-				?>
+				<?php echo $title; ?>
 			</h1>
-			<h2>That is a Subtitle</h2>
+			<h2><?php echo $subtitle; ?></h2>
 		</div>
     </header>
