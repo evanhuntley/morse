@@ -72,7 +72,7 @@
 				<p>
 				<?php
 					$content = get_the_content(); 
-					$trimmed_content = wp_trim_words( $content, 40, '<a href="'. get_permalink() .'"> ...Read More</a>' );
+					$trimmed_content = wp_trim_words( $content, 40 );
 					echo $trimmed_content;
 				?>
 				</p>
