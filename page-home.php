@@ -5,16 +5,19 @@
 	get_header(); 
 ?>
 
-<section class="about">
+<section class="about home-block">
 	<?php
 		$about_block_title = types_render_field("about_block_title", array('raw'=>true));
 		$about_block_intro = types_render_field("about_block_intro", array('raw'=>true));
 		$about_text = types_render_field("about_text", array('raw'=>true));
 	?>
-	<h1><?php echo $about_block_title; ?></h1>
-	<p class="intro"><?php echo $about_block_intro; ?></p>
-	<p><?php echo $about_text; ?></p>
-	<p class="signature">Mike Morse</p>
+	<div class="content">
+		<h1><?php echo $about_block_title; ?></h1>
+		<p class="intro"><?php echo $about_block_intro; ?></p>
+		<p><?php echo $about_text; ?></p>
+		<p class="signature">Mike Morse</p>
+	</div>
+	<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_mike-morse.jpg" alt="Mike Morse" />
 	
 </section>
 
@@ -51,7 +54,7 @@
 	</ul>
 </section>
 
-<section class="testimonials">
+<section class="testimonials flexslider">
 	<?php
 		$testimonial_block_title = types_render_field("testimonial_block_title", array('raw'=>true));
 		$testimonial_block_subtitle = types_render_field("testimonial_block_subtitle", array('raw'=>true));
@@ -81,13 +84,13 @@
 	<?php endif; ?>
 </section>
 
-<section class="actions">
+<section class="actions home-block">
 	<?php
 		$action_block_title = types_render_field("ac_block_title", array('raw'=>true));
 		$action_block_intro = types_render_field("ac_block_intro", array('raw'=>true));
 		$action_text = types_render_field("ac_text", array('raw'=>true));
 	?>
-	<div class="block">
+	<div class="content">
 		<h1><?php echo $action_block_title; ?></h1>
 		<p class="intro"><?php echo $action_block_intro; ?></p>
 		<p><?php echo $action_text; ?></p>
@@ -95,6 +98,7 @@
 	</div>
 	<div class="video">
 		<a href="#" class="play">Play</a>
+		<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_wedding-video.jpg" alt="Mike Morse" />
 	</div>
 </section>
 

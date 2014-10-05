@@ -54,7 +54,7 @@
     		</div>
     	</div>
     	<div class="header-main wrapper">
-	        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a>
+	        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><img src="<?php echo bloginfo('template_directory'); ?>/assets/img/morse-logo.svg" alt="<?php bloginfo( 'name' ); ?>" /></a>
         	<button id="menu-toggle"><i class="icon-menu"></i></button>
 	        <div class="main-menu">
 		        <nav role="navigation">
@@ -65,10 +65,10 @@
 		                    );
 		                wp_nav_menu($args);
 		            ?>
-		        	<li><a href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
-		        	<li><a href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>
-		        	<li><a href="<?php echo ot_get_option('instagram_url'); ?>"><i class="icon-instagram"></i></a></li>
-		        	<li><a href="<?php echo ot_get_option('youtube_url'); ?>"><i class="icon-youtube"></i></a></li>
+		        	<li class="social-link"><a class="twitter" href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
+		        	<li class="social-link"><a class="facebook" href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>
+		        	<li class="social-link"><a class="instagram" href="<?php echo ot_get_option('instagram_url'); ?>"><i class="icon-instagram"></i></a></li>
+		        	<li class="social-link"><a class="youtube" href="<?php echo ot_get_option('youtube_url'); ?>"><i class="icon-youtube"></i></a></li>
 		        </nav>
 	        </div>
     	</div>

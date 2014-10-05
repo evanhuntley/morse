@@ -1,0 +1,194 @@
+/* ==========================================================================
+	Home Page
+============================================================================= */
+
+/* Home Blocks -------------------------------- */
+
+.home-block {
+	
+	.content {
+		padding: 3em;
+		
+		@include bp-l {
+			width: 50%;
+		}
+	}
+	
+	h1 {
+		position: relative;
+		margin-bottom: 1.5em;
+		color: $gold;
+		
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -.75em;
+			width: 100px;
+			height: 6px;
+			background: url('../img/bg_border-gray.png') repeat-x;
+		}
+	}
+	
+	.intro {
+		@include font-size(1.375);
+		font-family: $sans-serif;
+		color: $lightpurple;
+	}
+	
+	p {
+		@include font-size(.875);
+	}
+	
+	.button {
+		color: $darkgray;
+	}
+}
+
+.subtitle {
+	@include font-size(1.25);
+	color: $gold;
+	text-transform: uppercase;
+	font-family: $sans-serif;
+	letter-spacing: 2px;
+}
+
+/* About ----------------------------------------- */
+
+.about {
+	@extend %clearfix;
+	
+	img {
+		
+		@include bp-l {
+			float: right;
+			width: 50%;
+		}
+	}
+	
+	.content {
+		
+		@include bp-l {
+			float: right;
+		}
+	}
+	
+	.signature {
+		display: block;
+		@extend %ir;
+		width: 200px;
+		height: 54px;
+		background: url('../img/morse-signature.png') no-repeat;
+	}
+}
+
+/* Services --------------------------------------- */
+
+.services {
+	@extend %clearfix;
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	li {
+		padding: 3em;
+		text-align: center;
+		color: $white;
+		
+		@include bp-l {
+			width: 33.3%;
+			float: left;
+		}
+		
+		&:first-child {
+			background: url('../img/bg_svc-wedding.jpg');
+		}
+		
+		&:nth-child(2) {
+			background: url('../img/bg_svc-private.jpg');			
+		}
+		
+		&:last-child {
+			background: url('../img/bg_svc-corporate.jpg');			
+		}
+		
+		h2 {
+			position: relative;
+			@include font-size(1.875);
+			
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: -.5em;
+				left: 50%;
+				margin-left: -50px;
+				width: 100px;
+				height: 6px;
+				background: url('../img/bg_border-gray.png') repeat-x;				
+			}
+		}
+	}
+}
+
+/* Testimonials ------------------------------------ */
+
+.testimonials {
+	padding: 3em 0;
+	text-align: center;
+}
+
+
+/* Actions ------------------------------------------ */
+
+.actions {
+	@extend %clearfix;
+	
+	img {
+		
+		@include bp-l {
+			float: left;
+		}
+	}
+	
+	.content {
+		
+		@include bp-l {
+			float: left;
+		}
+	}
+	
+	.video {
+		position: relative;
+		
+		@include bp-l {
+			float: left;
+			width: 50%;
+		}
+		
+		.play {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+
+/* Staff --------------------------------------------- */
+
+.staff {
+	padding: 5em 2em;
+	text-align: center;
+	color: $white;
+	background: url('../img/bg_staff-home.jpg');
+	
+	h1 {
+		color: $white;
+	}
+}

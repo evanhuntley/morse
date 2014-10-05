@@ -7,6 +7,8 @@ $(document).ready(function() {
 	$navMenu = $('nav > ul');
 	$accessNav = $('.access-nav ul');
 	
+	$('.flexslider').flexslider();
+	
 	enquire.register("screen and (max-width: 768px)", {
 		
 		setup: function() {
@@ -66,6 +68,7 @@ $(document).ready(function() {
 			
 			// Show Menu
 			$('.main-menu').css("display", "block");
+			$('.sub-menu').removeAttribute('style');
 			
 		}
 
