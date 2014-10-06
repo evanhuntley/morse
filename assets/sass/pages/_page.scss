@@ -7,7 +7,6 @@
 .primary-content {
 	@extend .wrapper;
 	position: relative;
-	padding: 6em 0 0;
 	background: $white;
 	border: 1px solid #d9d9d9;
 	@include font-size(.875);
@@ -29,7 +28,19 @@
 		width: 350px;
 		margin-left: -175px;
 		padding: 1.5em 2em;
-		background: #fff;
+		background: url('../img/bg_gray.jpg');
+		
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -1em;
+			left: 50%;
+			margin-left: -50px;
+			width: 100px;
+			height: 6px;
+			background: url('../img/bg_border-gray.png') repeat-x;
+		}
 		
 		a {
 			width: 100%;
@@ -41,5 +52,40 @@
 	a {
 		text-decoration: underline;
 		color: $pink;
+	}
+	
+	blockquote {
+		margin: 0;
+		color: $gold;
+		font-family: $sans-serif;
+		@include font-size(.875);
+		
+		@include bp-l {
+			@include font-size(1.25);
+		}
+		
+		&::before, &::after {
+			content: "\0022";
+		}
+	}
+	
+	
+	/* Quote Block ------------------------------------ */
+	
+	.quote {
+		padding: 6em 3.5% 3em;
+		text-align: center;
+		background: url('../img/bg_gray.jpg');
+	}
+	
+	/* Main Content Block ----------------------------- */
+	
+	.main-content {
+		text-align: left;
+		
+		h1 {
+			padding: 1em 0;
+			background: url('../img/bg_border-gray.png') bottom left repeat-x;		
+		}
 	}
 }

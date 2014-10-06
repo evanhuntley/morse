@@ -24,6 +24,10 @@ header {
 	&.banner-3 {
 		background-image: url('../img/bg_staff.jpg');
 	}
+	
+	.post-type-archive-staff & {
+		background-image: url('../img/bg_staff.jpg');		
+	}
 }
 
 /* Access Nav ---------------------------------- */
@@ -107,11 +111,11 @@ header {
 .main-menu {
 	display: none;
 	position: absolute;
-	top: 2em;
+	top: 0;
 	left: 0;
 	width: 100%;
 	padding-top: 3.5em;
-	background: #231f1e;
+	background: rgba(61,53,52,0.95);
 	
 	@include bp-l {
 		display: block;
@@ -142,7 +146,6 @@ nav {
 	li {
 		display: block;
 		text-align: center;
-		background: rgba(61,53,52,0.95);
 		
 		@include bp-l {
 			float: left;
@@ -195,11 +198,13 @@ nav {
 	.social-link {
 		width: 25%;
 		float: left;
+		margin-top: 2em;
 		
 		@include bp-l {
 			width: auto;
 			float: right;
 			clear: left;
+			margin: 0;
 		}
 		
 		@include bp-xl {
@@ -319,7 +324,7 @@ header .social {
 		}
 		
 		@include bp-xxl {
-			letter-spacing: 25px;
+			letter-spacing: 15px;
 		}
 	}
 	

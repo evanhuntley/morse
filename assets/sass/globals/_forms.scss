@@ -101,7 +101,9 @@ button, .button, input[type="submit"] {
 	background: transparent;
 	letter-spacing: 2px;
 	
-	&:hover {
-		background: $gold;
+	@include bp-l {
+		&:hover {
+			background: $gold;
+		}		
 	}
 }

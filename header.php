@@ -73,16 +73,21 @@
 	        </div>
     	</div>
     	<?php 
-    		if ( get_post_type() == 'staff' ) {
+    		if ( get_post_type() == 'staff' && is_archive()) {
+	    		$title = ot_get_option('staff_archive_title');
+	    		$subtitle = ot_get_option('staff_archive_subtitle');
+    		} elseif ( get_post_type() == 'staff' ) {
 	    		$title = get_the_title();
+				$subtitle = types_render_field("header_subtitle", array("raw" => true));
     		} else {
 	    		$title = types_render_field("header_title", array("raw" => true));
-	    		if( empty($title)) {
-	    			$title = "A Wedding Experience";
-				}
+				$subtitle = types_render_field("header_subtitle", array("raw" => true));
     		} 
-    		
-    		$subtitle = types_render_field("header_subtitle", array("raw" => true));
+    			
+    		if( empty($title)) {
+    			$title = "A Wedding Experience";
+			}
+			
 			if ( empty($subtitle)) {
 				$subtitle = "That You Will Never Forget";
 			}
