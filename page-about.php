@@ -30,6 +30,23 @@
 	        <?php the_content(); ?>
     	</section>
 
+		<section class="services-list">
+			<h1>Our Services</h1>
+			<?php
+				$child_posts = types_child_posts('services');
+				if ( !empty($child_posts)) :
+			?>
+			<ul>
+				<?php foreach ($child_posts as $child_post) : ?>
+					<li>
+						<h3><?php echo $child_post->post_title; ?></h3>
+						<p><?php echo $child_post->fields['service_description']; ?></p>	
+					</li>
+				<?php endforeach; ?>
+			</ul>
+			<?php endif; ?>
+		</section>
+
         <div class="call-to-action">
 	        <a href="#" class="button">Book Your Event</a>
         </div>

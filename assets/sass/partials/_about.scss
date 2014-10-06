@@ -1,0 +1,32 @@
+/* ==========================================================================
+	About Page
+============================================================================= */
+
+/* Services List ------------------------------------- */
+
+.services-list {
+	@extend %clearfix;
+	text-align: left;
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;		
+	}
+	
+	li {
+		
+		@include bp-l {
+			width: 48.5%;
+			float: left;
+			
+			&:nth-child(odd) {
+				margin-right: 3%;
+			}
+		}
+	}
+	
+	h3 {
+		margin-bottom: .5em;
+	}
+}
