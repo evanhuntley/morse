@@ -98,6 +98,7 @@
 		$action_block_title = types_render_field("ac_block_title", array('raw'=>true));
 		$action_block_intro = types_render_field("ac_block_intro", array('raw'=>true));
 		$action_text = types_render_field("ac_text", array('raw'=>true));
+		$action_block_video = types_render_field("ac_video", array('raw'=>true));
 	?>
 	<div class="content">
 		<h1><?php echo $action_block_title; ?></h1>
@@ -107,8 +108,7 @@
 	</div>
 	<div class="video">
 		<div class="play">
-			<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/btn_play.png" />
-			<a href="#">Watch Our Video</a>
+			<a class="play-btn" href="<?php echo $action_block_video; ?>"><img src="<?php echo bloginfo('template_directory'); ?>/assets/img/btn_play.png" />Watch Our Video</a>
 		</div>
 		<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_wedding-video.jpg" alt="Mike Morse" />
 	</div>

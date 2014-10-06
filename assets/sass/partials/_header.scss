@@ -307,9 +307,17 @@ header .social {
 
 .page-heading {
 	@extend %clearfix;
-	margin: 3em 1em 8em;
+	margin: 3em 1em 6em;
 	color: $white;
 	text-align: center;
+	
+	.home & {
+		margin: 3em 1em 8em;
+	}
+	
+	@include bp-l {
+		margin-bottom: 12em;
+	}
 	
 	h1 {
 		margin-bottom: 0;

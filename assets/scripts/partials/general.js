@@ -4,10 +4,17 @@
 
 $(document).ready(function() {
 	
-	$navMenu = $('header nav > ul');
-	$accessNav = $('.access-nav ul');
+	/* Init Lightbox -------------------------------- */
+	$('.play-btn').magnificPopup({type:'iframe'});
+	
+	/* Init Flexslider ------------------------------ */
 	
 	$('.flexslider').flexslider();
+	
+	/* Navigation ----------------------------------- */
+	
+	$navMenu = $('header nav > ul');
+	$accessNav = $('.access-nav ul');
 	
 	enquire.register("screen and (max-width: 768px)", {
 		
