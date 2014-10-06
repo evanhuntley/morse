@@ -6,9 +6,14 @@
 
 .service-links {
 	position: relative;
-	margin: 1em 0;
-	padding: 0;
+	margin: 1em 0 0;
+	padding: 2em 0 1em;
 	list-style: none;
+	
+	@include bp-l {
+		margin: 1em 0;
+		padding: 2em 0;
+	}
 	
 	&::before {
 		content: "";
@@ -23,17 +28,58 @@
 	}
 	
 	li {
-		display: inline-block;
-		margin: 0 1em;
+		position: relative;
+		display: block;
+		margin: .5em 1em;
+		
+		@include bp-l {
+			display: inline-block;
+			
+			&::after {
+				content: "\2022";
+				position: absolute;
+				top: 1em;
+				right: -2.5em;
+				margin: 0 1em;
+			}
+			
+			&:last-child {
+				
+				&::after {
+					content: "";
+				}
+			}
+		}
+		
+		@include bp-xl {
+			
+			&::after {
+				top: 1.5em;
+			}
+		}
 		
 		a {
+			display: block;
+			width: 100%;
+			padding: 1em;
 			text-decoration: none;
-			font-weight: 700;
+			font-weight: 400;
 			font-family: $sans-serif;
+			background: rgba(0, 0, 0, .2);
 			
-			&:hover {
-				color: $gold;
-				text-decoration: underline;
+			@include bp-l {
+				background: transparent;
+				@include font-size(1);
+				letter-spacing: 3px;
+			
+				&:hover {
+					color: $gold;
+					text-decoration: underline;
+				}					
+			}
+			
+			@include bp-xl {
+				@include font-size(1.25);
 			}
 		}
 	}
@@ -44,16 +90,21 @@
 .home-block {
 	
 	.content {
-		padding: 3em;
+		padding: 2em;
 		
 		@include bp-xl {
-			width: 50%;
+			padding: 2em 2em 0;
+		}
+		
+		@include bp-xxl {
+			padding: 3em 3em 1.75em;
 		}
 	}
 	
 	h1 {
 		position: relative;
-		margin-bottom: 1.5em;
+		margin: 0 0 1.5em;
+		@include font-size(2);
 		color: $gold;
 		letter-spacing: 3px;
 		
@@ -69,14 +120,24 @@
 	}
 	
 	.intro {
-		@include font-size(1.375);
+		@include font-size(1);
 		font-family: $sans-serif;
 		color: $lightpurple;
+		
+		@include bp-xxl {
+			@include font-size(1.25);
+		}
 	}
 	
 	p {
-		@include font-size(.875);
+		@include font-size(.75);
+		line-height: 1.75em;
 		text-align: justify;
+		
+		@include bp-xxl {
+			@include font-size(.875);
+			line-height: 2em;
+		}
 	}
 	
 	.button {
@@ -110,6 +171,7 @@
 		
 		@include bp-xl {
 			float: right;
+			width: 50%;
 		}
 	}
 	
@@ -134,30 +196,52 @@
 	}
 	
 	li {
-		padding: 3em;
+		position: relative;
+		padding: 6em 3em 3em;
 		text-align: center;
 		color: $white;
+		background-size: cover;
+		background-repeat: no-repeat;
 		
-		@include bp-l {
+		@include bp-xl {
 			width: 33.3%;
 			float: left;
 		}
 		
 		&:first-child {
-			background: url('../img/bg_svc-wedding.jpg');
+			background-image: url('../img/bg_svc-wedding.jpg');
 		}
 		
 		&:nth-child(2) {
-			background: url('../img/bg_svc-private.jpg');			
+			background-image: url('../img/bg_svc-private.jpg');			
 		}
 		
 		&:last-child {
-			background: url('../img/bg_svc-corporate.jpg');			
+			background-image: url('../img/bg_svc-corporate.jpg');			
+		}
+		
+		.icon {
+			position: absolute;
+			top: 4em;
+			left: 50%;
+			margin-left: -40px;
+			width: 80px;
+		}
+		
+		&:nth-child(2) {
+			
+			.icon {
+				top: 2.5em;
+			}
 		}
 		
 		h2 {
 			position: relative;
-			@include font-size(1.875);
+			@include font-size(1.375);
+			
+			@include bp-xxl {
+				@include font-size(1.75);				
+			}
 			
 			&::after {
 				content: "";
@@ -178,10 +262,39 @@
 
 .testimonials {
 	margin: 0;
-	padding: 6em 0 16em;
+	padding: 6em 1em 16em;
 	text-align: center;
 	background: url('../img/bg_testimonials.jpg') center bottom;
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
+	
+	h1 {
+		position: relative;
+		margin-top: 0;
+		padding-bottom: .5em;
+		@include font-size(1.5);
+		
+		@include bp-l {
+			padding-bottom: 0;
+			@include font-size(2.75);
+		}
+		
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -.5em;
+			left: 50%;
+			margin-left: -50px;
+			width: 100px;
+			height: 6px;
+			background: url('../img/bg_border-gray.png') repeat-x;				
+		}
+	}
+	
+	blockquote {
+		max-width: 80%;
+		margin: 0 auto;
+	}
 	
 	cite {
 		display: block;
@@ -197,6 +310,14 @@
 		&::after {
 			content: "\007E";
 			margin-left: 3px;
+		}
+	}
+	
+	.flex-direction-nav {
+		display: none;
+		
+		@include bp-l {
+			display: block;
 		}
 	}
 }
@@ -216,26 +337,63 @@
 	
 	.content {
 		
-		@include bp-l {
+		@include bp-xl {
 			float: left;
+			width: 50%;
 		}
 	}
 	
 	.video {
 		position: relative;
+		width: 100%;
+		float: left;
 		
-		@include bp-l {
+		@include bp-xl {
 			float: left;
 			width: 50%;
 		}
 		
+		img {
+			width: 100%;
+		}
+		
 		.play {
 			display: block;
+			width: 120px;
+			height: 120px;
+			margin: auto;
 			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			top: 0; left: 0; bottom: 0; right: 0;
+			text-align: center;
+			
+			@include bp-l {
+				width: 200px;
+				height: 200px;
+			}
+			
+			img {
+				display: inline-block;
+				float: none;
+				width: 80px;
+				height: 80px;
+				margin: 1em 0;
+				
+				@include bp-l {
+					width: auto;
+					height: auto;
+				}
+			}
+			
+			a {
+				color: $white;
+				font-family: $sans-serif;
+				text-transform: uppercase;
+				@include font-size(.75);
+				
+				@include bp-l {
+					@include font-size(1);
+				}
+			}
 		}
 	}
 }
@@ -243,12 +401,40 @@
 /* Staff --------------------------------------------- */
 
 .staff {
-	padding: 5em 2em;
+	padding: 2em;
 	text-align: center;
 	color: $white;
 	background: url('../img/bg_staff-home.jpg');
 	
+	@include bp-l {
+		padding: 5em 2em;
+	}
+	
 	h1 {
+		margin-top: 0;
 		color: $white;
+		@include font-size(1.375);
+		
+		@include bp-xl {
+			@include font-size(2.5);
+		}
+	}
+	
+	.subtitle {
+		@include font-size(.875);
+		
+		@include bp-xl {
+			@include font-size(1.5);
+		}
+	}
+	
+	p {
+		@include font-size(.75);
+		
+		@include bp-xl {
+			@include font-size(1);
+			max-width: 80%;
+			margin: 0 auto 2em;			
+		}
 	}
 }

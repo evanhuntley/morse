@@ -2,7 +2,7 @@
 
 <section class="primary-content">
 <?php if ( $wp_query->have_posts() ) : ?>
-<ul class="staff">
+<ul class="staff-list">
 	<?php while ( $wp_query->have_posts() ) : $wp_query->the_post();  ?>
 		<li>
 			<h2>

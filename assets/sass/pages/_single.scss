@@ -1,3 +1,8 @@
 // This is where you can put any styles specific to an individual post
 // .single is the class WordPress outputs to the body tag
-.single {}
+.single {
+	
+	.page-heading {
+		margin-bottom: 15em;
+	}
+}

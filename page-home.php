@@ -37,16 +37,25 @@
 	?>
 	<ul>
 		<li>
+			<div class="icon">
+				<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/i_wedding.png" alt="<?php echo $svc_block1_title; ?>" />
+			</div>
 			<h2><?php echo $svc_block1_title; ?></h2>
 			<p><?php echo $svc_block1_text; ?></p>
 			<a class="button" href="<?php echo $svc_block1_url; ?>">Learn More</a>
 		</li>
 		<li>
+			<div class="icon">
+				<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/i_private.png" alt="<?php echo $svc_block2_title; ?>" />
+			</div>
 			<h2><?php echo $svc_block2_title; ?></h2>
 			<p><?php echo $svc_block2_text; ?></p>
 			<a class="button" href="<?php echo $svc_block2_url; ?>">Learn More</a>			
 		</li>
 		<li>
+			<div class="icon">
+				<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/i_corporate.png" alt="<?php echo $svc_block3_title; ?>" />
+			</div>
 			<h2><?php echo $svc_block3_title; ?></h2>
 			<p><?php echo $svc_block3_text; ?></p>
 			<a class="button" href="<?php echo $svc_block3_url; ?>">Learn More</a>			
@@ -97,7 +106,10 @@
 		<a class="button" href="#">Book Your Event</a>
 	</div>
 	<div class="video">
-		<a href="#" class="play">Play</a>
+		<div class="play">
+			<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/btn_play.png" />
+			<a href="#">Watch Our Video</a>
+		</div>
 		<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_wedding-video.jpg" alt="Mike Morse" />
 	</div>
 </section>

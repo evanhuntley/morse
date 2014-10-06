@@ -4,7 +4,7 @@
 
 /* Staff Archive ----------------------------------  */
 
-.staff {
+.staff-list {
 	@extend %clearfix;
 	margin: 0;
 	padding: 0;
@@ -72,16 +72,20 @@
 		
 		li {
 			position: absolute;
+			
+			a {
+				text-decoration: none;
+			}
 		}
 		
 		.older {
-			top: 0;
-			left: 0;
+			top: 1em;
+			left: 1em;
 		}
 		
 		.newer {
-			top: 0;
-			right: 0;
+			top: 1em;
+			right: 1em;
 		}
 	}
 	

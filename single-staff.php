@@ -7,7 +7,13 @@
 			<div class="profile-img">
 				<?php the_post_thumbnail('full');?>
 			</div>
-			
+			<a class="button" href="http://www.djmikemorse.djintelligence.com/availability">Check Availability</a>
+			<div class="quote">
+				<h1></h1>
+				<blockquote>
+				</blockquote>
+			</div>
+			<h2>About</h2>
 			<?php the_content(); ?>
 
             <ul class="navigation">
