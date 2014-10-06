@@ -13,7 +13,7 @@
 					<div class="address"><?php echo $address; ?></div>
 					<p class="phone"><?php echo 'Office: ' . $phone; ?></p>
 				</div>
-				<a class="button" href="#">Book Your Event Today</a>
+				<a class="button" href="http://www.djmikemorse.djintelligence.com/booking">Book Your Event Today</a>
 				<ul class="social">
 		        	<li><a href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
 		        	<li><a href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>
@@ -31,6 +31,7 @@
 	                $args = array(
 	                    'container' => 'false',
 	                    'items_wrap' => '<ul>%3$s</ul>',
+						'depth' => 1,
 	                    );
 	                wp_nav_menu($args);
 	            ?>

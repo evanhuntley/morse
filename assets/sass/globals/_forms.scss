@@ -99,5 +99,9 @@ button, .button, input[type="submit"] {
 	text-transform: uppercase;
 	text-align: center;
 	background: transparent;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	
+	&:hover {
+		background: $gold;
+	}
 }

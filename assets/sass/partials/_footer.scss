@@ -17,8 +17,9 @@
 	}
 	
 	.contact {
-		margin: 0 0 3em;
-		padding: 2em 0;
+		@extend %clearfix;
+		margin: 0 0 2em;
+		padding: 2em 0 1em;
 		background: url('../img/bg_footer-border.png') repeat-x bottom left;
 		
 		h3 {
@@ -30,6 +31,19 @@
 		h4 {
 			margin: 0;
 			@include font-size(1.0625);
+		}
+		
+		p {
+			
+			@include bp-xl {
+				width: 50%;
+				float: left;
+				
+				&.phone {
+					float: right;
+					text-align: right;
+				}
+			}
 		}
 	}
 	
@@ -78,6 +92,32 @@
 			width: 55%;
 		}
 		
+		.field-group-1 {
+			
+			@include bp-l {
+				float: left;
+				width: 48.5%;
+			}
+		}
+		
+		.field-group-2 {
+			margin: 1.5em 0;
+			
+			@include bp-l {
+				float: right;
+				width: 48.5%;
+				margin: 0;
+			}
+			
+			p {
+				margin: 0;
+			}
+			
+			br {
+				display: none;
+			}
+		}
+		
 		h3 {
 			font-family: $serif;
 			@include font-size(1);
@@ -89,17 +129,37 @@
 			}			
 		}
 		
-		.event-type {
+		.event {
+			position: relative;
 			padding: 1em;
+			line-height: 1em;
 			background: $lightpurple;
 			
+			    &::after {
+				    content: url('../img/i_arrow-down.png');
+				    position: absolute;
+				    top: 1em;
+				    right: 1em;
+			    }
+			
 			label {
-				padding: 1em;
 				font-family: sans-serif;
 				text-transform: uppercase;
+				color: rgba(255,255,255,0.5);
+				font-weight: 700;
+			}
+			
+			span {
+				position: static;
 			}
 			
 			select {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width: 100%;
 				opacity: 0;
 			    border: none;
 			    box-shadow: none;
@@ -110,6 +170,7 @@
 		}
 		
 		input[type="text"], input[type="email"], textarea {
+			width: 100%;
 			padding: 1em;
 			color: $white;
 			background: $lightpurple;
@@ -121,6 +182,7 @@
 		
 		input[type="submit"] {
 			width: 100%;
+			height: 52px;
 			border-color: $lightpurple;
 			
 			@include bp-l {
@@ -129,21 +191,33 @@
 		}
 		
 		.message {
-			
-			@include bp-l {
-				float: right;				
+		
+			textarea {
+				height: 198px;
+				margin: 0 0 1.5em;
 			}
 		}
 	}
 	
 	nav {
+		margin: 0 0 1em;
+		text-align: center;
 		
 		@include bp-l {
 			width: 100%;
 			float: left;
-			margin: 1em 0;
+			margin: 1em 0 0;
 			padding: 1em 0;
 			background: url('../img/bg_footer-border.png') repeat-x top left;
+		}
+		
+		li {
+			background: transparent;
+			
+			@include bp-l {
+				display: inline-block;
+				float: none;
+			}
 		}
 	}
 	

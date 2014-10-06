@@ -4,7 +4,7 @@
 
 $(document).ready(function() {
 	
-	$navMenu = $('nav > ul');
+	$navMenu = $('header nav > ul');
 	$accessNav = $('.access-nav ul');
 	
 	$('.flexslider').flexslider();
@@ -41,7 +41,7 @@ $(document).ready(function() {
 			$('.main-menu').css("display", "none");	
 			
 			// Expand Submenus on First Click, Go on Second
-			$('.menu-item-has-children a').click(function(e) {
+			$('header .menu-item-has-children a').click(function(e) {
 				  var clicks = $(this).data('clicks');
 				  if (clicks) {
 				  

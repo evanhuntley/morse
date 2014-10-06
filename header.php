@@ -49,7 +49,7 @@
     		<div class="wrapper">
     			<ul>
     				<li><a href="#">Meet DJ Mike Morse</a></li>
-    				<li><a href="#">Client Login</a></li>
+    				<li><a href="http://www.djmikemorse.djintelligence.com/client">Client Login</a></li>
     			</ul>
     		</div>
     	</div>
@@ -88,9 +88,15 @@
 			}
     	?>
 		<div class="page-heading">
-			<h1>
-				<?php echo $title; ?>
-			</h1>
+			<h1><?php echo $title; ?></h1>
 			<h2><?php echo $subtitle; ?></h2>
+			<?php if ( is_page('home') ) : ?>
+				<ul class="service-links">
+					<li><a href="#">Wedding Events</a></li>
+					<li><a href="#">Private Events</a></li>
+					<li><a href="#">Corporate Events</a></li>
+				</ul>
+				<a class="button" href="http://www.djmikemorse.djintelligence.com/booking">Book Your Event</a>
+			<?php endif; ?>
 		</div>
     </header>

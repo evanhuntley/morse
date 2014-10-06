@@ -2,6 +2,43 @@
 	Home Page
 ============================================================================= */
 
+/* Header Banner ------------------------------ */
+
+.service-links {
+	position: relative;
+	margin: 1em 0;
+	padding: 0;
+	list-style: none;
+	
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -50px;
+		width: 100px;
+		height: 6px;
+		background: url('../img/bg_border-gray.png') repeat-x;
+	}
+	
+	li {
+		display: inline-block;
+		margin: 0 1em;
+		
+		a {
+			text-decoration: none;
+			font-weight: 700;
+			font-family: $sans-serif;
+			
+			&:hover {
+				color: $gold;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
 /* Home Blocks -------------------------------- */
 
 .home-block {
@@ -9,7 +46,7 @@
 	.content {
 		padding: 3em;
 		
-		@include bp-l {
+		@include bp-xl {
 			width: 50%;
 		}
 	}
@@ -18,6 +55,7 @@
 		position: relative;
 		margin-bottom: 1.5em;
 		color: $gold;
+		letter-spacing: 3px;
 		
 		&::after {
 			content: "";
@@ -38,6 +76,7 @@
 	
 	p {
 		@include font-size(.875);
+		text-align: justify;
 	}
 	
 	.button {
@@ -59,8 +98,9 @@
 	@extend %clearfix;
 	
 	img {
+		width: 100%;
 		
-		@include bp-l {
+		@include bp-xl {
 			float: right;
 			width: 50%;
 		}
@@ -68,7 +108,7 @@
 	
 	.content {
 		
-		@include bp-l {
+		@include bp-xl {
 			float: right;
 		}
 	}
