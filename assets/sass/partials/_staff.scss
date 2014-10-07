@@ -53,6 +53,15 @@
 
 .single-staff {
 	
+	.page-heading {
+		
+		h2 {
+			color: $gold;
+			@include font-size(1.5);
+			letter-spacing: 0;
+		}
+	}
+	
 	.profile-img {
 		position: absolute;
 		top: -100px;
@@ -67,9 +76,22 @@
 	.quote {
 		
 		.button {
+			position: relative;
 			margin: 3em 0 1em;
 			color: $darkgray;
 			text-decoration: none;
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: -2.5em;
+				left: 50%;
+				margin-left: -50px;
+				width: 100px;
+				height: 6px;
+				background: url('../img/bg_border-gray.png') repeat-x;
+			}
 		}
 		
 		h2 {

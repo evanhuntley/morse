@@ -114,7 +114,7 @@
 	</div>
 </section>
 
-<section class="staff">
+<section class="feature-block">
 	<?php
 		$staff_block_title = types_render_field("staff_block_title", array('raw'=>true));
 		$staff_subtitle = types_render_field("staff_subtitle", array('raw'=>true));

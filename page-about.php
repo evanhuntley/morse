@@ -29,6 +29,21 @@
 	
 	        <?php the_content(); ?>
     	</section>
+    	
+    	<section class="staff-feature">
+			<?php
+				$staff_feature_title = types_render_field("staff_feature_title", array('raw'=>true));
+				$staff_feature_intro = types_render_field("staff_feature_intro", array('raw'=>true));
+				$staff_feature_text = types_render_field("staff_feature_text", array('raw'=>true));
+			?>
+			<div class="content">
+				<h1><?php echo $staff_feature_title; ?></h1>
+				<p class="intro"><?php echo $staff_feature_intro; ?></p>
+				<p><?php echo $staff_feature_text; ?></p>
+			</div>
+    		
+			<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_dj-gray.jpg" alt="DJ in Action" />
+    	</section>
 
 		<section class="services-list">
 			<h1>Our Services</h1>
@@ -45,6 +60,27 @@
 				<?php endforeach; ?>
 			</ul>
 			<?php endif; ?>
+		</section>
+		
+		<section class="feature-block about">
+			<?php
+				$feature_block_title = types_render_field("feature_block_title", array('raw'=>true));
+				$feature_subtitle = types_render_field("feature_subtitle", array('raw'=>true));
+				$feature_text = types_render_field("feature_text", array('raw'=>true));	
+			?>
+			<div class="subtitle"><?php echo $feature_subtitle; ?></div>
+			<h1><?php echo $feature_block_title; ?></h1>
+			<p><?php echo $feature_text; ?></p>
+		</section>
+		
+		<section class="content-bottom">
+			<?php
+				$bottom_content_title = types_render_field("bottom_content_title", array('raw'=>true));
+				$bottom_content = types_render_field("bottom_content", array('raw'=>true));			
+			?>
+			<h1><?php echo $bottom_content_title; ?></h1>
+			<?php echo $bottom_content; ?>
+		
 		</section>
 
         <div class="call-to-action">

@@ -2,12 +2,60 @@
 	About Page
 ============================================================================= */
 
+/* Staff Feature Block ------------------------------- */
+
+.staff-feature {
+	@extend %clearfix;		
+	background: url('../img/bg_blue.jpg');
+	
+	.primary-content & {
+		padding: 0;
+	}
+	
+	.content {
+		padding: 2em;
+		text-align: left;
+		
+		@include bp-l {
+			float: left;
+			width: 50%;
+		}		
+	
+		@include bp-xl {
+			padding: 3em 3em 0;
+		}
+		
+		@include bp-xxl {
+			padding: 3em 3em 1.75em;
+		}
+	}
+	
+	.intro {
+		@include font-size(1.25);
+		font-family: $sans-serif;
+	}
+	
+	img {
+		
+		@include bp-l {
+			float: right;
+			width: 50%;
+		}
+	}
+}
+
 /* Services List ------------------------------------- */
 
 .services-list {
 	@extend %clearfix;
 	text-align: left;
+	margin-bottom: 2em;
 	
+	h1 {
+		padding: 1em 0;
+		background: url('../img/bg_border-gray.png') bottom left repeat-x;		
+	}	
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -29,4 +77,24 @@
 	h3 {
 		margin-bottom: .5em;
 	}
+}
+
+/* Feature Block -------------------------------------- */
+
+.feature-block.about {
+	padding: 3em 0;
+	background: url('../img/bg_crowd.jpg');
+	background-size: cover;
+}
+
+/* Content Bottom ------------------------------------- */
+
+.content-bottom {
+	margin-bottom: 2em;
+	text-align: left;
+	
+	h1 {
+		padding: 1em 0;
+		background: url('../img/bg_border-gray.png') bottom left repeat-x;		
+	}	
 }
