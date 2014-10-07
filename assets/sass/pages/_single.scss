@@ -3,6 +3,10 @@
 .single {
 	
 	.page-heading {
-		margin-bottom: 15em;
+		margin-bottom: 10em;
+		
+		@include bp-l {
+			margin-bottom: 15em;
+		}
 	}
 }

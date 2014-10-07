@@ -64,29 +64,56 @@
 		}
 	}
 	
+	.quote {
+		
+		.button {
+			margin: 3em 0 1em;
+			color: $darkgray;
+			text-decoration: none;
+		}
+		
+		h2 {
+			@include font-size(1.5);
+			line-height: 1em;
+			
+			@include bp-l {
+				@include font-size(2.375);
+				margin-bottom: .5em;
+			}
+		}
+	}
+	
 	.primary-content {
 		position: relative;
 	}
 	
 	.navigation {
+		display: none;
 		list-style: none;
+		
+		@include bp-l {
+			display: block;
+		}
 		
 		li {
 			position: absolute;
 			
 			a {
 				text-decoration: none;
+				color: $darkgray;
+				text-transform: uppercase;
+				font-family: $sans-serif;
 			}
 		}
 		
 		.older {
-			top: 1em;
-			left: 1em;
+			top: 3em;
+			left: 3em;
 		}
 		
 		.newer {
-			top: 1em;
-			right: 1em;
+			top: 3em;
+			right: 3em;
 		}
 	}
 	
