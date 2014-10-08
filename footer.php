@@ -15,10 +15,10 @@
 				</div>
 				<a class="button" href="http://www.djmikemorse.djintelligence.com/booking">Book Your Event Today</a>
 				<ul class="social">
-		        	<li><a href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
-		        	<li><a href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>
-		        	<li><a href="<?php echo ot_get_option('instagram_url'); ?>"><i class="icon-instagram"></i></a></li>
-		        	<li><a href="<?php echo ot_get_option('youtube_url'); ?>"><i class="icon-youtube"></i></a></li>			
+		        	<li><a class="twitter" href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
+		        	<li><a class="facebook" href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>
+		        	<li><a class="instagram" href="<?php echo ot_get_option('instagram_url'); ?>"><i class="icon-instagram"></i></a></li>
+		        	<li><a class="youtube" href="<?php echo ot_get_option('youtube_url'); ?>"><i class="icon-youtube"></i></a></li>			
 				</ul>
 			</div>
 			

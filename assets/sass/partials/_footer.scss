@@ -83,6 +83,25 @@
 			line-height: 0;
 			text-align: center;		
 			border-radius: 25px;	
+			
+			@include bp-l {
+			
+				&.twitter {
+					&:hover { background: #82cada; }
+				}	
+			
+				&.facebook {
+					&:hover { background: #4068a4; }
+				}	
+			
+				&.youtube {
+					&:hover { background: #a42e3c; }
+				}	
+			
+				&.instagram {
+					&:hover { background: #d6b366; }
+				}	
+			}
 		}	
 	}
 	
@@ -170,6 +189,11 @@
 			    background: transparent;
 			    background-image: none;
 			    -webkit-appearance: none;
+			    
+			    option {
+				    font-family: $sans-serif;
+				    padding: .5em;
+			    }
 			}
 		}
 		
@@ -225,6 +249,15 @@
 			@include bp-l {
 				display: inline-block;
 				float: none;
+			}
+		}
+		
+		.menu-item-has-children {
+			
+			&:hover {
+				a {
+					background: transparent;
+				}
 			}
 		}
 	}

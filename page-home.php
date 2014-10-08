@@ -128,7 +128,7 @@
 </section>
 
 <section class="party">
-	<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/g_party.png" alt="Let's Get This Party Started" />
+	<a href="http://www.djmikemorse.djintelligence.com/booking"><img src="<?php echo bloginfo('template_directory'); ?>/assets/img/g_party.png" alt="Let's Get This Party Started" /></a>
 </section>
 
 <?php get_footer(); ?>
