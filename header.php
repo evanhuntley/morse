@@ -101,7 +101,7 @@
 					<li><a href="#">Private Events</a></li>
 					<li><a href="#">Corporate Events</a></li>
 				</ul>
-				<a class="button" href="http://www.djmikemorse.djintelligence.com/booking">Book Your Event</a>
+				<a class="button" href="http://www.djmikemorse.djintelligence.com/contact/">Book Your Event</a>
 			<?php endif; ?>
 		</div>
     </header>

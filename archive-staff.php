@@ -7,7 +7,7 @@
 			$quote_block_text = ot_get_option('staff_archive_quote_text');			
 		?>
 		<h2><?php echo $quote_block_title; ?></h2>
-		<blockquote><?php echo $quote_block_text; ?></blockquote>
+		<p><?php echo $quote_block_text; ?></p>
 	</section>
 
 <?php if ( $wp_query->have_posts() ) : ?>

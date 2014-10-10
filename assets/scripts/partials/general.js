@@ -11,6 +11,15 @@ $(document).ready(function() {
 	
 	$('.flexslider').flexslider();
 	
+	/* Handle change in Contact Form Select ---------- */
+	
+	$('footer select').blur(function() {
+		
+		var $selectedItem = $(this).find(":selected").text();
+		$('label[for="event-type"').text($selectedItem);		
+		
+	});
+	
 	/* Navigation ----------------------------------- */
 	
 	$navMenu = $('header nav > ul');

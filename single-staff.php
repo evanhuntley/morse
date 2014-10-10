@@ -24,10 +24,10 @@
 
             <ul class="navigation">
                 <li class="older">
-					<?php previous_post_link( '%link', '&larr; %title' ); ?>
+					<?php previous_post_link( '%link', '%title' ); ?>
                 </li>
                 <li class="newer">
-					<?php next_post_link( '%link', '%title &rarr;' ); ?>
+					<?php next_post_link( '%link', '%title' ); ?>
                 </li>
             </ul>
 

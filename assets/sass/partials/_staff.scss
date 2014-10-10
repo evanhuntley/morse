@@ -6,9 +6,14 @@
 
 .staff-list {
 	@extend %clearfix;
-	margin: 3em 0;
+	margin: 0;
 	padding: 0;
 	list-style: none;
+	background: url('../img/bg_white-texture.jpg');
+	
+	@include bp-xl {
+		padding: 3em 3.5em 0;
+	}
 	
 	li {
 		display: block;
@@ -26,6 +31,8 @@
 	}
 	
 	img {
+		width: 200px;
+		height: 200px;
 		border-radius: 50%;
 	}
 	
@@ -64,16 +71,19 @@
 	
 	.profile-img {
 		position: absolute;
-		top: -100px;
+		top: -125px;
 		left: 50%;
-		margin-left: -100px;
+		margin-left: -125px;
 		
 		img {
+			width: 250px;
+			height: 250px;
 			border-radius: 50%;
 		}
 	}
 	
 	.quote {
+		padding-top: 8em;
 		
 		.button {
 			position: relative;
@@ -131,11 +141,33 @@
 		.older {
 			top: 3em;
 			left: 3em;
+			
+			&::before {
+				content: "";
+				display: inline-block;
+				position: relative;
+				top: 2px;
+				width: 7px;
+				height: 15px;
+				margin-right: 1em;
+				background: url('../img/i_arrow-left-small.png');
+			}
 		}
 		
 		.newer {
 			top: 3em;
 			right: 3em;
+
+			&::after {
+				content: "";
+				display: inline-block;
+				position: relative;
+				top: 2px;
+				width: 7px;
+				height: 15px;
+				margin-left: 1em;
+				background: url('../img/i_arrow-right-small.png');
+			}
 		}
 	}
 	

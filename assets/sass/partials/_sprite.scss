@@ -1,0 +1,31 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.btn_play-hover {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -305px;
+  width: 160px;
+  height: 159px;
+}
+.btn_play {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -464px;
+  width: 160px;
+  height: 159px;
+}
+.g_party-hover {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -152px;
+  width: 976px;
+  height: 153px;
+}
+.g_party {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px 0px;
+  width: 979px;
+  height: 152px;
+}

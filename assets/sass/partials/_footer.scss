@@ -34,6 +34,7 @@
 		}
 		
 		p {
+			@include font-size(.8125);
 			
 			@include bp-xl {
 				width: 50%;
@@ -53,7 +54,8 @@
 		border-color: $lightpurple;
 		
 		&:hover {
-			background: $lightpurple;
+			background: $gold;
+			border-color: $gold;
 		}
 	}
 	
@@ -70,6 +72,18 @@
 			display: inline-block;
 			margin: 0 .5em;
 			text-align: center;
+			
+			@include bp-l {
+				margin: 0 .25em;
+			}
+			
+			@include bp-xl {
+				margin: 0 1em;
+			}
+			
+			@include bp-xxl {
+				margin: 0 1.5em;
+			}
 		}
 		
 		a {
@@ -85,6 +99,9 @@
 			border-radius: 25px;	
 			
 			@include bp-l {
+				width: 60px;
+				height: 60px;
+				border-radius: 30px; 
 			
 				&.twitter {
 					&:hover { background: #82cada; }
@@ -212,9 +229,12 @@
 			width: 100%;
 			height: 52px;
 			border-color: $lightpurple;
+			font-weight: 400;
+			transition: all .2s;
 			
 			&:hover {
-				background: $lightpurple;
+				background: $gold;
+				border-color: $gold;
 			}
 			
 			@include bp-l {
@@ -276,5 +296,9 @@
 		color: $white;
 		text-transform: uppercase;
 		text-align: center;
+		
+		@include bp-l {
+			@include font-size(.75);
+		}
 	}
 }

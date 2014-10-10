@@ -38,9 +38,11 @@
 			&::after {
 				content: "\2022";
 				position: absolute;
-				top: 1em;
-				right: -2.5em;
+				top: 1.75em;
+				right: -2.25em;
 				margin: 0 1em;
+				@include font-size(1);
+				line-height: 0;
 			}
 			
 			&:last-child {
@@ -54,7 +56,10 @@
 		@include bp-xl {
 			
 			&::after {
-				top: 1.5em;
+				top: .9375em;
+				right: -1.625em;
+				@include font-size(2.5);
+				line-height: 0;
 			}
 		}
 		
@@ -180,6 +185,7 @@
 		@extend %ir;
 		width: 200px;
 		height: 54px;
+		margin: 2em 0 0;
 		background: url('../img/morse-signature.png') no-repeat;
 	}
 }
@@ -255,6 +261,11 @@
 				background: url('../img/bg_border-gray.png') repeat-x;				
 			}
 		}
+		
+		p {
+			margin: 0 0 2em;
+			@include font-size(.875);
+		}
 	}
 }
 
@@ -262,10 +273,11 @@
 
 .testimonials {
 	margin: 0;
-	padding: 6em 1em 16em;
+	padding: 10.5em 1em 16em;
 	text-align: center;
-	background: url('../img/bg_testimonials.jpg') center bottom;
-	background-repeat: repeat-x;
+	background-image: url('../img/bg_testimonials.jpg'), url('../img/l_morse-gray.png');
+	background-position: center bottom, center 2.5em;
+	background-repeat: repeat-x, no-repeat;
 	
 	h1 {
 		position: relative;
@@ -292,8 +304,13 @@
 	}
 	
 	blockquote {
-		max-width: 80%;
 		margin: 0 auto;
+		@include font-size(.9375);
+		line-height: 1.75em;
+		
+		@include bp-l {
+			max-width: 80%;
+		}
 	}
 	
 	cite {
@@ -371,16 +388,27 @@
 				height: 200px;
 			}
 			
-			img {
+			.btn {
+				@extend %ir;
 				display: inline-block;
 				float: none;
 				width: 80px;
 				height: 80px;
 				margin: 1em 0;
+				background-image: url(../img/icon-sprite.png);
+				background-position: 0 -232px;
+				background-size: 491px;
 				
 				@include bp-l {
-					width: auto;
-					height: auto;
+					width: 160px;
+					height: 159px;
+					background-image: url(../img/icon-sprite.png);
+					background-position: 0px -463px;
+					background-size: 976px;
+					
+					&:hover {
+						background-position: 0px -304px;
+					}
 				}
 			}
 			
@@ -432,7 +460,7 @@
 		@include font-size(.75);
 		
 		@include bp-xl {
-			@include font-size(1);
+			@include font-size(.875);
 			max-width: 80%;
 			margin: 0 auto 2em;			
 		}
@@ -442,7 +470,56 @@
 /* Party Started --------------------------------- */
 
 .party {
-	padding: 1em;
-	text-align: center;
-	background: url('../img/bg_tan.jpg');
+
+	a {
+		display: block;
+		width: 100%;
+		padding: 1.5em 0;
+		@extend %ir;
+		text-align: center;
+		background: url('../img/bg_tan.jpg');
+		
+		@include bp-l {
+			
+			&:hover {
+				background: url('../img/bg_blue-dark.jpg');
+				
+				span {
+					background-position: 0px -93px;				
+				}
+			}
+		}
+		
+		@include bp-xl {
+			
+			&:hover {
+				
+				span {
+					background-position: 0px -152px;
+				}
+			}
+		}
+		
+		span {
+			display: block;
+			width: 300px;
+			min-height: 47px;
+			margin: 0 auto;
+			background-image: url('../img/icon-sprite.png');
+			background-position: 0px 0px;	
+			background-size: 300px;
+			
+			@include bp-l {
+				width: 600px;
+				height: 93px;
+				background-size: 600px;
+			}
+			
+			@include bp-xl {
+				width: 976px;
+				height: 152px;
+				background-size: 100%;
+			}
+		}
+	}
 }

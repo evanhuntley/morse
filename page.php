@@ -23,7 +23,7 @@
 		</section>
         
         <div class="call-to-action">
-	        <a href="http://www.djmikemorse.djintelligence.com/booking" class="button">Book Your Event</a>
+	        <a href="http://www.djmikemorse.djintelligence.com/contact/" class="button">Book Your Event</a>
         </div>
 
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:' ), 'after' => '</div>' ) ); ?>

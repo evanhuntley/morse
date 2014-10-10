@@ -104,11 +104,14 @@
 		<h1><?php echo $action_block_title; ?></h1>
 		<p class="intro"><?php echo $action_block_intro; ?></p>
 		<p><?php echo $action_text; ?></p>
-		<a class="button" href="#">Book Your Event</a>
+		<a class="button" href="http://www.djmikemorse.djintelligence.com/contact/">Book Your Event</a>
 	</div>
 	<div class="video">
 		<div class="play">
-			<a class="play-btn" href="<?php echo $action_block_video; ?>"><img src="<?php echo bloginfo('template_directory'); ?>/assets/img/btn_play.png" />Watch Our Video</a>
+			<a class="play-btn" href="<?php echo $action_block_video; ?>">
+				<span class="btn">Play</span>
+				<span class="title">Watch Our Video</span>
+			</a>
 		</div>
 		<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_wedding-video.jpg" alt="Mike Morse" />
 	</div>
@@ -128,7 +131,7 @@
 </section>
 
 <section class="party">
-	<a href="http://www.djmikemorse.djintelligence.com/booking"><img src="<?php echo bloginfo('template_directory'); ?>/assets/img/g_party.png" alt="Let's Get This Party Started" /></a>
+	<a href="http://www.djmikemorse.djintelligence.com/contact/"><span>Let's Get This Party Started</span></a>
 </section>
 
 <?php get_footer(); ?>

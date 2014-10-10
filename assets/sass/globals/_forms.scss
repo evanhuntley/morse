@@ -91,7 +91,7 @@ textarea {
 
 button, .button, input[type="submit"] {
 	display: inline-block;
-	padding: 1em;
+	padding: 1em 2.5em;
 	border: 3px solid $gold;
 	color: $white;
 	font-family: $serif;
@@ -100,6 +100,7 @@ button, .button, input[type="submit"] {
 	text-align: center;
 	background: transparent;
 	letter-spacing: 2px;
+	@include font-size(.8125);
 	
 	@include bp-l {
 		&:hover {
