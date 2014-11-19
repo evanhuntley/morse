@@ -9,7 +9,7 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <article role="main" class="primary-content type-page" id="post-<?php the_ID(); ?>">
+    <article role="main" class="primary-content type-page about" id="post-<?php the_ID(); ?>">
     
     	<section class="quote">
     		<?php
@@ -79,7 +79,7 @@
 				$bottom_content = types_render_field("bottom_content", array('raw'=>true));			
 			?>
 			<h1><?php echo $bottom_content_title; ?></h1>
-			<?php echo $bottom_content; ?>
+			<p><?php echo $bottom_content; ?></p>
 		
 		</section>
 

@@ -13,7 +13,7 @@ $(document).ready(function() {
 	
 	/* Handle change in Contact Form Select ---------- */
 	
-	$('footer select').blur(function() {
+	$('footer select').change(function() {
 		
 		var $selectedItem = $(this).find(":selected").text();
 		$('label[for="event-type"').text($selectedItem);		

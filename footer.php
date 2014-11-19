@@ -13,7 +13,7 @@
 					<div class="address"><?php echo $address; ?></div>
 					<p class="phone"><?php echo 'Office: ' . $phone; ?></p>
 				</div>
-				<a class="button" href="http://www.djmikemorse.djintelligence.com/contact/">Book Your Event Today</a>
+				<a class="button" href="http://www.djmikemorse.djintelligence.com/contact/">Request a Price Quote</a>
 				<ul class="social">
 		        	<li><a class="twitter" href="<?php echo ot_get_option('twitter_url'); ?>"><i class="icon-twitter"></i></a></li>
 		        	<li><a class="facebook" href="<?php echo ot_get_option('facebook_url'); ?>"><i class="icon-facebook"></i></a></li>

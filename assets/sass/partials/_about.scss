@@ -2,6 +2,31 @@
 	About Page
 ============================================================================= */
 
+/* About Page General -------------------------------- */
+
+.about {
+	
+	h1 {
+		@include font-size(1.875);
+		color: $darkgray;		
+	}
+	
+	.main-content {
+		margin: 0;
+		padding: 1em 8% 3em;
+		background: url('../img/bg_white-texture.jpg');
+		
+		h1 {
+			margin-top: 0;
+			padding-bottom: .5em;
+		}
+		
+		p {
+			line-height: 2em;
+		}
+	}
+}
+
 /* Staff Feature Block ------------------------------- */
 
 .staff-feature {
@@ -30,9 +55,23 @@
 		}
 	}
 	
+	h1 {
+		padding: 0 0 .5em;
+		@include font-size(1.875);
+		background: url('../img/bg_staff-block-divider.png') bottom left no-repeat;
+		
+		@include bp-l {
+			@include font-size(2.375);
+		}
+	}
+	
 	.intro {
-		@include font-size(1.25);
+		@include font-size(1.125);
 		font-family: $sans-serif;
+	}
+	
+	p {
+		line-height: 2em;
 	}
 	
 	img {
@@ -46,13 +85,14 @@
 
 /* Services List ------------------------------------- */
 
-.services-list {
+.primary-content .services-list {
 	@extend %clearfix;
 	text-align: left;
-	margin-bottom: 2em;
+	padding: 1em 8% 5em;
+	background: url('../img/bg_white-texture.jpg');
 	
 	h1 {
-		padding: 1em 0;
+		padding: 1em 0 .5em;
 		background: url('../img/bg_border-gray.png') bottom left repeat-x;		
 	}	
 
@@ -82,19 +122,40 @@
 /* Feature Block -------------------------------------- */
 
 .feature-block.about {
-	padding: 3em 0;
-	background: url('../img/bg_crowd.jpg');
+	padding: 3em 3.5%;
+	background: url('../img/bg_crowd.jpg') center top;
 	background-size: cover;
+	
+	h1 {
+		padding: 0 0 .5em;
+		color: $white;
+		@include font-size(1.5);
+		background: url('../img/bg_feature-block-divider.png') bottom center no-repeat;
+		
+		@include bp-l {
+			@include font-size(2.5);
+			margin-bottom: .5em;
+		}
+	}
+	
+	p {
+		line-height: 2em;
+	}
 }
 
 /* Content Bottom ------------------------------------- */
 
-.content-bottom {
-	margin-bottom: 2em;
+.primary-content .content-bottom {
+	padding: 1em 8% 5em;
 	text-align: left;
+	background: url('../img/bg_white-texture.jpg');
 	
 	h1 {
-		padding: 1em 0;
+		padding: 1em 0 .5em;
 		background: url('../img/bg_border-gray.png') bottom left repeat-x;		
 	}	
+	
+	p {
+		line-height: 2em;
+	}
 }

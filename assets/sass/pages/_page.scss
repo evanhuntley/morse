@@ -62,7 +62,8 @@
 		@include font-size(.875);
 		
 		@include bp-l {
-			@include font-size(1.25);
+			@include font-size(1.125);
+			line-height: 1.75em;
 		}
 		
 		&::before, &::after {
@@ -77,6 +78,18 @@
 		padding: 6em 3.5% 3em;
 		text-align: center;
 		background: url('../img/bg_gray.jpg');
+		
+		@include bp-xl {
+			padding: 6em 8% 3em;
+		}
+		
+		h2 {
+			line-height: 1em;
+		}
+		
+		p {
+			line-height: 2em;
+		}
 	}
 	
 	/* Main Content Block ----------------------------- */
@@ -87,7 +100,21 @@
 		
 		h1 {
 			padding: 1em 0;
-			background: url('../img/bg_border-gray.png') bottom left repeat-x;		
+			background: url('../img/bg_border-gray.png') bottom left repeat-x;	
+			@include font-size(2);
+			line-height: 1em;
+			
+			@include bp-m {
+				@include font-size(2.875);
+			}	
+		}
+		
+		p {
+			line-height: 2em;
+		}
+		
+		li {
+			margin-bottom: 1em;
 		}
 	}
 }

@@ -91,4 +91,17 @@ function current_to_active($text){
         }
 add_filter ('wp_nav_menu','current_to_active');
 
+    function slug_order_archive_by_field( $query ) {
+        //Only do if is main query fo a specific cpt's archive.
+        //@TODO set cpt's name
+        if ( $query->is_main_query() &&  is_post_type_archive( 'staff' ) ) {
+            //@TODO Set the name of the field we are ordering by
+            //@TODO change order to DESC IF you want to go in reverse order
+            $query->set( 'order', 'ASC' );
+            //@TODO uncomment next line IF you want to sort by an integer instead of alphabetically
+            //$query->set( 'orderby', 'meta_value_num' );
+        }
+    }
+    add_action( 'pre_get_posts', 'slug_order_archive_by_field' );
+
 ?>

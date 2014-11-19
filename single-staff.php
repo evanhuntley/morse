@@ -18,7 +18,7 @@
 			</div>
 			
 			<section class="main-content">
-				<h1>About</h1>
+				<h1>Behind the Turntables</h1>
 				<?php the_content(); ?>
 			</section>
 
