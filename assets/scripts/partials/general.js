@@ -16,7 +16,7 @@ $(document).ready(function() {
 	$('footer select').change(function() {
 		
 		var $selectedItem = $(this).find(":selected").text();
-		$('label[for="event-type"').text($selectedItem);		
+		$('label[for="event-type"]').text($selectedItem);		
 		
 	});
 	
